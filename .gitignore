@@ -1,0 +1,9 @@
+*.iml
+*.idea
+*.class
+.classpath
+
+target
+
+src/main/ui/node_modules
+src/main/ui/dist
