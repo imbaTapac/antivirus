@@ -1,17 +1,17 @@
 package com.antivirus.scanner;
 
-public class ObjectTable {
+public class SectionTable {
     public static final long objectTableSize = 40;
 
     private char[] objectName;
     private int virtualSize;
-    private int sectionRVA;
+    private int virtualAddress;
     private int physicalSize;
     private int physicalOffset;
     private char reserved;
-    private int objectFlags;
+    private String[] sectionFlags;
 
-    public ObjectTable(){
+    public SectionTable(){
 
     }
 
@@ -31,12 +31,12 @@ public class ObjectTable {
         this.virtualSize = virtualSize;
     }
 
-    public int getSectionRVA() {
-        return sectionRVA;
+    public int getVirtualAddress() {
+        return virtualAddress;
     }
 
-    public void setSectionRVA(int sectionRVA) {
-        this.sectionRVA = sectionRVA;
+    public void setVirtualAddress(int virtualAddress) {
+        this.virtualAddress = virtualAddress;
     }
 
     public int getPhysicalSize() {
@@ -63,11 +63,11 @@ public class ObjectTable {
         this.reserved = reserved;
     }
 
-    public int getObjectFlags() {
-        return objectFlags;
+    public String[] getSectionFlags() {
+        return sectionFlags;
     }
 
-    public void setObjectFlags(int objectFlags) {
-        this.objectFlags = objectFlags;
+    public void setSectionFlags(String[] sectionFlags) {
+        this.sectionFlags = sectionFlags;
     }
 }
