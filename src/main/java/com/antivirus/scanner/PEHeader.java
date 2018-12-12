@@ -13,8 +13,8 @@ public class PEHeader {
     private int NTHeaderSize;
     private byte[] magic;
     private int entryPointRVA;
-    private int objectAlign;
-    private int fileAlign;
+    private int sectionAlignment;
+    private int fileAlignment;
     private int headerSize;
 
     public PEHeader() {
@@ -61,20 +61,20 @@ public class PEHeader {
         this.entryPointRVA = entryPointRVA;
     }
 
-    public int getObjectAlign() {
-        return objectAlign;
+    public int getSectionAlignment() {
+        return sectionAlignment;
     }
 
-    public void setObjectAlign(int objectAlign) {
-        this.objectAlign = objectAlign;
+    public void setSectionAlignment(int sectionAlignment) {
+        this.sectionAlignment = sectionAlignment;
     }
 
-    public int getFileAlign() {
-        return fileAlign;
+    public int getFileAlignment() {
+        return fileAlignment;
     }
 
-    public void setFileAlign(int fileAlign) {
-        this.fileAlign = fileAlign;
+    public void setFileAlignment(int fileAlignment) {
+        this.fileAlignment = fileAlignment;
     }
 
     public int getHeaderSize() {

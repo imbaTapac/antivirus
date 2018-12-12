@@ -6,7 +6,7 @@ public class PE {
     private DOSHeader dosHeader;
     private DOSStub dosStub;
     private PEHeader peHeader;
-    private List<ObjectTable> objectTable;
+    private List<SectionTable> sectionTable;
 
     public PE(DOSHeader dosHeader, DOSStub dosStub, PEHeader peHeader) {
         this.dosHeader = dosHeader;
@@ -38,11 +38,11 @@ public class PE {
         this.peHeader = peHeader;
     }
 
-    public List<ObjectTable> getObjectTable() {
-        return objectTable;
+    public List<SectionTable> getSectionTable() {
+        return sectionTable;
     }
 
-    public void setObjectTable(List<ObjectTable> objectTable) {
-        this.objectTable = objectTable;
+    public void setSectionTable(List<SectionTable> sectionTable) {
+        this.sectionTable = sectionTable;
     }
 }
